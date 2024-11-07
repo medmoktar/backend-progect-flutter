@@ -54,11 +54,11 @@ Route::get('pointdeaux',[App\Http\Controllers\pointdeauxController::class,'all']
 Route::get('language',[App\Http\Controllers\languageController::class,'all']);
 Route::get('reseaux',[App\Http\Controllers\reseauxController::class,'all']);
 Route::post('village/reseaux/{id}',[App\Http\Controllers\reseauxController::class,'insert']);
-Route::post('reseaux/store/{id}',[App\Http\Controllers\reseauxController::class,'store']);
+Route::get('reseaux/store/{id}',[App\Http\Controllers\reseauxController::class,'store']);
 Route::post('village/language/{id}',[App\Http\Controllers\languageController::class,'insert']);
-Route::post('language/store/{id}',[App\Http\Controllers\languageController::class,'store']);
+Route::get('language/store/{id}',[App\Http\Controllers\languageController::class,'store']);
 Route::post('village/pointdeaux/{id}',[App\Http\Controllers\pointdeauxController::class,'insert']);
-Route::post('pointdeaux/store/{id}',[App\Http\Controllers\pointdeauxController::class,'store']);
+Route::get('pointdeaux/store/{id}',[App\Http\Controllers\pointdeauxController::class,'store']);
 Route::get('village/chef/{id}',[App\Http\Controllers\Villagecontroller::class,'chef']);
 
 
