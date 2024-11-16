@@ -19,6 +19,15 @@ class languageController extends Controller
         return response('Success',201);
       }  
 
+      public function delete($id){
+        $x=Village::find($id);
+        
+          $x->languages()->detach();
+        
+        // return response("");
+        
+    }
+
       public function store($id){
         $x=Village::find($id);
         $y=$x->languages;

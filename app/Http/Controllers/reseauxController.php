@@ -20,6 +20,15 @@ class reseauxController extends Controller
       return response('Success',201);
     }  
 
+    public function delete($id){
+        $x=Village::find($id);
+        
+          $x->reseauxes()->detach();
+        
+        // return response("");
+        
+    }
+
     public function store($id){
       $x=Village::find($id);
       $y=$x->reseauxes;

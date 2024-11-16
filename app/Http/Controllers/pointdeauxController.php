@@ -21,6 +21,15 @@ class pointdeauxController extends Controller
         return response('Success',201);
       }  
 
+      public function delete($id){
+        $x=Village::find($id);
+        
+          $x->pointdeauxes()->detach();
+        
+        // return response("");
+        
+    }
+
       public function store($id){
         $x=Village::find($id);
         $y=$x->pointdeauxes;

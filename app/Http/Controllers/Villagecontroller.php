@@ -44,13 +44,18 @@ class Villagecontroller extends Controller
          return response($y);
       }
 
+      public function update($id){
+         $x=Village::find($id);
+         $y=$x->update(request()->all());
+         if(!$y){
+            return response('error');
+         }
+         return response('success',200);
+      }
+
      
 
-    public function chef($id){
-        $x=Village::find($id);
-        $y=$x->Chefvillage;
-        return response($y);
-    }
+    
 
     
 }

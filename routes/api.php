@@ -28,6 +28,7 @@ Route::get('willaya/{id}',[Moughataacontroller::class,'getmoughataa']);
 Route::get('commune/{id}',[App\Http\Controllers\Communecontroller::class,'getcommune']);
 Route::get('village/{id}',[App\Http\Controllers\Villagecontroller::class,'getvillage']);
 Route::post('village/create',[App\Http\Controllers\Villagecontroller::class,'addvillage']);
+Route::patch('village/update',[App\Http\Controllers\Villagecontroller::class,'update']);
 Route::get('count/hopitaux/{id}',[App\Http\Controllers\hopitauxcontroller::class,'count']);
 Route::get('count/Ecole/{id}',[App\Http\Controllers\Ecolecontroller::class,'count']);
 Route::get('all/hopitaux/{id}',[App\Http\Controllers\hopitauxcontroller::class,'all']);
@@ -46,8 +47,6 @@ Route::get('commune/hopitaux/{id}',[App\Http\Controllers\Communecontroller::clas
 Route::get('commune/Ecole/{id}',[App\Http\Controllers\Communecontroller::class,'Ecole']);
 Route::get('village/hopitaux/{id}',[App\Http\Controllers\Villagecontroller::class,'hopitaux']);
 Route::get('village/Ecole/{id}',[App\Http\Controllers\Villagecontroller::class,'Ecole']);
-Route::post('chefvillage/create',[App\Http\Controllers\chefvillagecontroller::class,'create']);
-Route::post('chefvillage/get',[App\Http\Controllers\chefvillagecontroller::class,'get']);
 Route::get('typeEcole',[App\Http\Controllers\type_EcoleController::class,'all']);
 Route::get('typecente',[App\Http\Controllers\type_stucturecenteController::class,'all']);
 Route::get('pointdeaux',[App\Http\Controllers\pointdeauxController::class,'all']);
@@ -55,11 +54,16 @@ Route::get('language',[App\Http\Controllers\languageController::class,'all']);
 Route::get('reseaux',[App\Http\Controllers\reseauxController::class,'all']);
 Route::post('village/reseaux/{id}',[App\Http\Controllers\reseauxController::class,'insert']);
 Route::get('reseaux/store/{id}',[App\Http\Controllers\reseauxController::class,'store']);
+Route::delete('reseaux/delete/{id}',[App\Http\Controllers\reseauxController::class,'delete']);
 Route::post('village/language/{id}',[App\Http\Controllers\languageController::class,'insert']);
 Route::get('language/store/{id}',[App\Http\Controllers\languageController::class,'store']);
+Route::delete('language/delete/{id}',[App\Http\Controllers\languageController::class,'delete']);
 Route::post('village/pointdeaux/{id}',[App\Http\Controllers\pointdeauxController::class,'insert']);
 Route::get('pointdeaux/store/{id}',[App\Http\Controllers\pointdeauxController::class,'store']);
-Route::get('village/chef/{id}',[App\Http\Controllers\Villagecontroller::class,'chef']);
+Route::delete('pointdeaux/delete/{id}',[App\Http\Controllers\pointdeauxController::class,'delete']);
+Route::post('chefvillage/create',[App\Http\Controllers\chefvillagecontroller::class,'create']);
+Route::patch('chefvillage/update/{id}',[App\Http\Controllers\chefvillagecontroller::class,'update']);
+Route::get('chefvillage/store/{id}',[App\Http\Controllers\chefvillagecontroller::class,'store']);
 
 
 
